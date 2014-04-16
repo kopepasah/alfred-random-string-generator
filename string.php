@@ -62,6 +62,8 @@ function generate_string( $query ) {
 		$key = $params['upper'] . $params['lower'] . $params['number'];
 	}
 	
+	$key = str_repeat( $key, $query[0] );
+	
 	$key = substr( str_shuffle( $key ), 0, $query[0] );
 	
 	/**
